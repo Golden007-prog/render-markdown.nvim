@@ -131,7 +131,7 @@ function Updater:render()
             self:clear()
             self.decorator:set(extmarks)
             if initial then
-                compat.fix_lsp_window(self.buf, self.win, extmarks)
+                compat.fix_lsp_window(self.buf, self.win)
                 state.on.initial({ buf = self.buf, win = self.win })
             end
             self:display()
